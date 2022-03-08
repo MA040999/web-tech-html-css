@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
+
+:root {
+  --bg-color: rgb(192, 192, 192);
+  --dark-grey: rgb(58, 58, 58);
+}
+
+body {
+  background-color: rgb(192, 192, 192);
+  height: 100vh;
+}
+
+table,
+thead,
+tbody,
+td,
+th,
+tr {
+  border-collapse: collapse;
+}
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--dark-grey);
+}
+table {
+  border-radius: 10px;
+  width: 50%;
+  overflow: hidden;
+  background-color: white;
+  color: var(--dark-grey);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+td {
+  padding: 20px;
+}
+
+thead {
+  background-color: var(--dark-grey);
+  font-weight: 900;
+  color: white;
+  font-size: larger;
+}
+
+.table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.nav-bar {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color);
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2em;
+  padding: 1em 0;
+}
+
+.nav-bar li {
+  padding: 1em 2em;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+  font-weight: bold;
+  font-size: large;
+}
+
+.nav-bar li:hover {
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+}
+
+.nav-bar li:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  height: 6px;
+  background-color: var(--dark-grey);
+}
+
+.nav-bar li > a {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.login-btn {
+  background-color: transparent;
+  border: none;
+  font-size: large;
+  font-weight: 900;
+  justify-self: flex-end;
+  color: var(--dark-grey);
+  border-radius: 50px;
+  border: 2px solid var(--dark-grey);
+  padding: 0.5em 2em;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  display: flex;
+  place-items: center;
+  gap: 0.5em;
+}
+
+.login-btn:hover {
+  background-color: var(--dark-grey);
+  color: white;
+}
+.logo {
+  width: 100px;
+}
